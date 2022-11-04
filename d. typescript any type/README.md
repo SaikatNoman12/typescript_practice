@@ -1,0 +1,1 @@
+# TypeScript Dynamic or any type
