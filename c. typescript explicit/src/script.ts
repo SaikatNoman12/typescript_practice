@@ -54,7 +54,7 @@ object1 = {
     name: 'Abdullah Al Nomaan',
     age: 300,
     adult: false
-} 
+}
 console.log(object1);
 
 
@@ -66,23 +66,31 @@ let object3: {
 }
 
 object3 = {
-    named:'Abdullah',
-    age:30,
-    adult:true
+    named: 'Abdullah',
+    age: 30,
+    adult: true
 };
 console.log(object3);
 
 
-let data : string | number[] | boolean;
+let data: string | number[] | boolean;
 
 data = 'Hello';
 console.log(data);
 
-data = [1,3,4]
+data = [1, 3, 4]
 console.log(data);
 
 data = true;
 console.log(data);
+
+
+// declare object use array:--------- 
+let object4: object;
+
+object4 = [1, 2, 3, 4, 5, 6];
+console.log(object4);
+
 
 
 

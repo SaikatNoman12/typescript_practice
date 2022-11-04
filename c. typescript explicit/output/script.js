@@ -53,3 +53,7 @@ data = [1, 3, 4];
 console.log(data);
 data = true;
 console.log(data);
+// declare object use array:--------- 
+let object4;
+object4 = [1, 2, 3, 4, 5, 6];
+console.log(object4);
