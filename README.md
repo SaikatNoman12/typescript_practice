@@ -16,4 +16,6 @@
 
 7. TypeScript Function Signature.
 
-8. TypeScript Class
+8. TypeScript Class.
+
+9. TypeScript Assess Modifiers.
