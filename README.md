@@ -15,3 +15,5 @@
 6. TypeScript Aliases.
 
 7. TypeScript Function Signature.
+
+8. TypeScript Class
