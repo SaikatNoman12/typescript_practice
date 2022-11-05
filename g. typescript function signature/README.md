@@ -1,0 +1,1 @@
+# TypeScript Function Signature
