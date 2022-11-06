@@ -19,3 +19,5 @@
 8. TypeScript Class.
 
 9. TypeScript Assess Modifiers.
+
+10. TypeScript Interfaces.
