@@ -1,5 +1,30 @@
 # TypeScript
 
+### Install typescript in your device
+
+    npm i -g typescript
+
+### Type script run command
+
+    // 1st:
+
+    tsc script.ts
+
+    // 2nd:
+
+    tsc --init
+
+    rootDir:'./src';  // go tsconfig.json
+
+    outDir:'./output';  // go tsconfig.json
+
+    tsc   
+
+    // or
+
+    tsc -w  // always run typescript file.
+
+
 ## Lesson
 
 1. TypeScript compilation.
@@ -21,3 +46,5 @@
 9. TypeScript Assess Modifiers.
 
 10. TypeScript Interfaces.
+
+11. TypeScript Generic.
