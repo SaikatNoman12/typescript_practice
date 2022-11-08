@@ -1,4 +1,7 @@
+import { Person5 } from "./Persons/Person.js";
+
 /* --- TypeScript Basics --- */
+
 
 // string:
 let a = 'Nomaan';
@@ -711,7 +714,9 @@ console.log(karim);
 
 
 
-
+/* ===== TypeScript Module System ===== */
+const rihab = new Person5('Rihab Uddin', 14, 'India', 7);
+console.log(rihab);
 
 
 

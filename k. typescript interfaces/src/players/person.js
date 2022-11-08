@@ -1,7 +1,4 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.Player2 = exports.Person = void 0;
-class Person {
+export class Person {
     constructor(name, age, country) {
         this.name = name;
         this.age = age;
@@ -11,8 +8,7 @@ class Person {
         console.log(`${this.name} is playing. He lives in ${this.country}`);
     }
 }
-exports.Person = Person;
-class Player2 {
+export class Player2 {
     constructor(name, age, country) {
         this.name = name;
         this.age = age;
@@ -25,4 +21,3 @@ class Player2 {
         return this.name;
     }
 }
-exports.Player2 = Player2;
