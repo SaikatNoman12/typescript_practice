@@ -261,4 +261,36 @@ func8 = (a) => {
     return a;
 };
 console.log(func8(8));
-/* ==== Type Aliases ==== */
+let datas;
+datas = 'Hello PHP';
+console.log(datas);
+datas = 202010;
+console.log(datas);
+let datas2 = {
+    name: 'Mahin',
+    age: 300,
+    country: 3900
+};
+console.log(datas2);
+let newFunc = (a) => {
+    return a;
+};
+console.log(newFunc(1202));
+let myNewFunc9 = (a, opt) => {
+    console.log(opt);
+    return a;
+};
+console.log(myNewFunc9(100200300, {
+    name: 'Rahim',
+    age: 30,
+    country: 'India',
+}));
+let objVar = {
+    name: 'Sirik',
+    age: 32,
+    country: 'Srilanka',
+};
+console.log(myNewFunc9(103, objVar));
+let arrData = [10, 's', 10];
+arrData.push('Hello');
+console.log(arrData);

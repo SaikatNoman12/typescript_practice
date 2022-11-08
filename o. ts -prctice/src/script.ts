@@ -409,7 +409,7 @@ let func7: Function = (a: number, b?: any): number => {
 console.log(func7(1020));
 
 
-let func8: (a: number) => number ;
+let func8: (a: number) => number;
 func8 = (a: number) => {
     return a;
 }
@@ -417,6 +417,83 @@ console.log(func8(8));
 
 
 /* ==== Type Aliases ==== */
+
+type numOrStr = number | string;
+
+let datas: numOrStr;
+
+datas = 'Hello PHP';
+console.log(datas);
+
+datas = 202010;
+console.log(datas);
+
+
+
+type onj2 = {
+    name: string,
+    age: number,
+    country: numOrStr
+}
+
+let datas2: onj2 = {
+    name: 'Mahin',
+    age: 300,
+    country: 3900
+};
+console.log(datas2);
+
+
+// function type:
+type myOBJFunc = (a: number) => number;
+
+let newFunc: myOBJFunc = (a: number) => {
+    return a;
+}
+console.log(newFunc(1202));
+
+
+// function parameter type:
+type obj4 = {
+    name: string;
+    age: number;
+    country: string;
+}
+
+type num = number;
+type funcAll = (a: num, opt: obj4) => num;
+
+let myNewFunc9: funcAll = (a: num, opt: obj4) => {
+    console.log(opt);
+    return a;
+}
+
+
+console.log(myNewFunc9(100200300, {
+    name: 'Rahim',
+    age: 30,
+    country: 'India',
+}));
+
+
+
+
+let objVar: obj4 = {
+    name: 'Sirik',
+    age: 32,
+    country: 'Srilanka',
+}
+
+console.log(myNewFunc9(103, objVar));
+
+
+type arTy = [num, string, num]
+
+let arrData: arTy = [10, 's', 10];
+
+arrData.push('Hello');
+console.log(arrData);
+
 
 
 
