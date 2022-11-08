@@ -496,7 +496,218 @@ console.log(arrData);
 
 
 
+/* ==== Function Signature ==== */
 
+// function return string type: 
+let myNewFun1: (a: number, b: string) => string;
+
+myNewFun1 = (a: number, b: string) => {
+    return a + b;
+}
+console.log(
+    myNewFun1(1202, 'Hello TypeScript')
+);
+
+
+// function return number type:
+let myNewFun2: (a: number) => number;
+
+myNewFun2 = (a: number) => {
+    return a;
+}
+console.log(
+    myNewFun2(12150)
+);
+
+
+// function return boolean type:
+let myNewFun3: (a: boolean) => boolean;
+myNewFun3 = (a: boolean) => {
+    return a;
+}
+console.log(
+    myNewFun3(true)
+);
+
+
+// function return object type:
+let myNewFun4: (a: object) => object;
+
+myNewFun4 = (a: object) => {
+    return a;
+}
+
+console.log(
+    myNewFun4(
+        {
+            name: 'Mahin',
+            age: 20
+        }
+    )
+);
+
+
+// function return object schema type:
+let myNewFun5: (a: {
+    name: string;
+    age: number;
+    country: string;
+}) => object;
+
+myNewFun5 = (a: {
+    name: string;
+    age: number;
+    country: string;
+}) => {
+    return a;
+};
+
+console.log(myNewFun5({
+    name: 'Karim',
+    age: 30,
+    country: 'India'
+}));
+
+
+// function return object schema type:
+type obj33 = {
+    name: string,
+    age: number,
+    country: string
+}
+
+let myNewFu1: (a: obj33) => (any | void);
+
+myNewFu1 = (a: obj33) => {
+    return a;
+}
+
+
+let newObj23: obj33 = {
+    name: 'Abdul',
+    age: 40,
+    country: 'Italy'
+};
+
+console.log(myNewFu1(newObj23));
+
+
+// normal function return type number:
+function myFu2(a: number): number {
+    return a;
+}
+console.log(myFu2(100));
+
+
+
+// normal function return type string:
+function myFu3(a: string): string {
+    return a;
+}
+console.log(myFu3('Hello TypeScript'));
+
+
+// normal function return type boolean:
+function myFu4(a: boolean): boolean {
+    return a;
+}
+console.log(myFu4(true));
+
+
+// normal function return union type:
+function myFu5(b: (number | string)): (string | number) {
+    return b;
+}
+console.log(myFu5('Ek Lakh'));
+
+
+// normal function return any type:
+function myFu6(b: any): any {
+    return b;
+}
+console.log(myFu6('Hello Any Type.'));
+
+
+// function return array type:
+let myF = (a: number[]): any[] => {
+    return a;
+}
+
+console.log(myF(
+    [1, 2, 3, 4]
+));
+
+
+
+/* ======= typescript class ======= */
+class Person {
+    name: string;
+    age: number;
+    country: string;
+    constructor(n: string, a: number, c: string) {
+        this.name = n,
+            this.age = a,
+            this.country = c
+    }
+
+    play() {
+        console.log(`${this.name} is playing. He lives in ${this.country}. He is ${this.age} years old.`);
+    }
+
+}
+
+
+const sakib = new Person('Sabik Khan', 30, 'India');
+console.log(sakib);
+
+
+const classArrData: Person[] = [];
+classArrData.push(sakib);
+
+console.log(classArrData);
+
+
+/* ======= TypeScript Access Modifiers ======= */
+class Person2 {
+    private name: string;
+    public age: number;
+    readonly country: string;
+
+    constructor(n: string, a: number, c: string) {
+
+        this.name = n,
+            this.age = a,
+            this.country = c
+
+    }
+
+
+    play() {
+        console.log(`${this.name} is playing. He lives in ${this.country}. He is ${this.age} years old.`);
+    }
+
+}
+
+const rahim = new Person2('Rahim Khan', 40, 'Pakistan');
+console.log(rahim);
+
+
+
+// access modifiers type:
+class Person4 {
+    constructor(
+        private name: string,
+        public age: number,
+        readonly country: string
+    ) { }
+
+    play() {
+        console.log(`${this.name} he is playing. He lives in ${this.country}. He is an ${this.age} years old.`);
+    }
+}
+
+const karim = new Person4('Karim Khan', 40, 'Bangladesh');
+console.log(karim);
 
 
 

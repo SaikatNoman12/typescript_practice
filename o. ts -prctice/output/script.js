@@ -294,3 +294,123 @@ console.log(myNewFunc9(103, objVar));
 let arrData = [10, 's', 10];
 arrData.push('Hello');
 console.log(arrData);
+/* ==== Function Signature ==== */
+// function return string type: 
+let myNewFun1;
+myNewFun1 = (a, b) => {
+    return a + b;
+};
+console.log(myNewFun1(1202, 'Hello TypeScript'));
+// function return number type:
+let myNewFun2;
+myNewFun2 = (a) => {
+    return a;
+};
+console.log(myNewFun2(12150));
+// function return boolean type:
+let myNewFun3;
+myNewFun3 = (a) => {
+    return a;
+};
+console.log(myNewFun3(true));
+// function return object type:
+let myNewFun4;
+myNewFun4 = (a) => {
+    return a;
+};
+console.log(myNewFun4({
+    name: 'Mahin',
+    age: 20
+}));
+// function return object schema type:
+let myNewFun5;
+myNewFun5 = (a) => {
+    return a;
+};
+console.log(myNewFun5({
+    name: 'Karim',
+    age: 30,
+    country: 'India'
+}));
+let myNewFu1;
+myNewFu1 = (a) => {
+    return a;
+};
+let newObj23 = {
+    name: 'Abdul',
+    age: 40,
+    country: 'Italy'
+};
+console.log(myNewFu1(newObj23));
+// normal function return type number:
+function myFu2(a) {
+    return a;
+}
+console.log(myFu2(100));
+// normal function return type string:
+function myFu3(a) {
+    return a;
+}
+console.log(myFu3('Hello TypeScript'));
+// normal function return type boolean:
+function myFu4(a) {
+    return a;
+}
+console.log(myFu4(true));
+// normal function return union type:
+function myFu5(b) {
+    return b;
+}
+console.log(myFu5('Ek Lakh'));
+// normal function return any type:
+function myFu6(b) {
+    return b;
+}
+console.log(myFu6('Hello Any Type.'));
+// function return array type:
+let myF = (a) => {
+    return a;
+};
+console.log(myF([1, 2, 3, 4]));
+/* ======= typescript class ======= */
+class Person {
+    constructor(n, a, c) {
+        this.name = n,
+            this.age = a,
+            this.country = c;
+    }
+    play() {
+        console.log(`${this.name} is playing. He lives in ${this.country}. He is ${this.age} years old.`);
+    }
+}
+const sakib = new Person('Sabik Khan', 30, 'India');
+console.log(sakib);
+const classArrData = [];
+classArrData.push(sakib);
+console.log(classArrData);
+/* ======= TypeScript Access Modifiers ======= */
+class Person2 {
+    constructor(n, a, c) {
+        this.name = n,
+            this.age = a,
+            this.country = c;
+    }
+    play() {
+        console.log(`${this.name} is playing. He lives in ${this.country}. He is ${this.age} years old.`);
+    }
+}
+const rahim = new Person2('Rahim Khan', 40, 'Pakistan');
+console.log(rahim);
+// access modifiers type:
+class Person4 {
+    constructor(name, age, country) {
+        this.name = name;
+        this.age = age;
+        this.country = country;
+    }
+    play() {
+        console.log(`${this.name} he is playing. He lives in ${this.country}. He is an ${this.age} years old.`);
+    }
+}
+const karim = new Person4('Karim Khan', 40, 'Bangladesh');
+console.log(karim);
