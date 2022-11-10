@@ -721,24 +721,278 @@ console.log(rihab);
 
 
 
+/* ==== Use Interface ==== */
+
+// use object:
+interface firstInterface {
+    name: string;
+    age: number;
+    country: string
+}
+
+let myNewObj: firstInterface = {
+    name: 'Habib',
+    age: 30,
+    country: 'MIT'
+};
+console.log(myNewObj);
 
 
 
+// use object:
+interface secondInterface {
+    status: number;
+    age: number;
+    time: number;
+}
+
+
+const myNewObj2: secondInterface = {
+    status: 25,
+    age: 24,
+    time: 20
+}
+console.log(myNewObj2);
 
 
 
+// use function:
+interface funcObj {
+    name: string;
+    age: number;
+    country: string;
+}
+
+function myNewAsFunction(option: funcObj): object {
+    return option;
+}
+
+console.log(myNewAsFunction(
+    {
+        name: 'Noman',
+        age: 255,
+        country: 'Bangladesh'
+    }
+));
+
+
+// use interface function variable object:
+interface oneObj {
+    name: string;
+    age: number;
+    country: string;
+    adult: boolean;
+}
 
 
 
+function myOneFunction(opt: oneObj): object {
+    return opt;
+}
+
+
+let oneObj2 = {
+    name: 'Rahi',
+    age: 26,
+    country: 'India',
+    adult: true,
+    sss: 'fdf'
+}
+
+console.log(
+    myOneFunction(oneObj2)
+);
 
 
 
+// interface use for class:
+interface playIng {
+    age: number;
+    adult: boolean;
+
+    getPriority(): void;
+
+    play(): void;
+}
+
+
+class Player implements playIng {
+    constructor(
+        private name: string,
+        public age: number,
+        readonly adult: boolean,
+        private country: string
+    ) { }
+
+    getPriority() {
+        return this.name;
+    }
+
+    play() {
+        console.log(` ${this.name} is playing. He lives in ${this.country}. He is not ${this.adult}. He is an ${this.age} years old.`);
+    }
+
+}
+
+const halim = new Player('Halim', 25, true, 'Pakistan');
+console.log(halim);
+
+
+const arrFunc: playIng[] = [];
+
+arrFunc.push(halim)
+console.log(arrFunc);
+
+
+// use generic:
+
+// use generic for function. Do not use generic type:
+const myArrowFunc = <T>(opt: T) => {
+    const id = Math.floor(Math.random() * 100);
+    return { ...opt, id }
+}
+
+const arrowData = myArrowFunc({
+    name: 'Nadim',
+    age: 30,
+});
+console.log(arrowData);
 
 
 
+// use generic for function. Use generic type:
+const myArrowFunc1 = <T extends object>(opt: T): object => {
+    const id = Math.floor(Math.random() * 100);
+    return { ...opt, id };
+
+}
+
+const myArr = myArrowFunc1({
+    name: 'Kamal',
+    age: 30,
+    county: 'Feni'
+});
+
+console.log(myArr);
+
+
+// use generic for function. Use generic type schema:
+const myArrowFunc2 = <T extends { name: string; age: number; }>(opt: T): object => {
+
+    const id = Math.floor(Math.random() * 100);
+    return { id, ...opt };
+
+}
+
+const myArr3 = myArrowFunc2({
+    name: 'sss',
+    age: 333
+});
+
+console.log(myArr3);
+
+
+// use interface for generic:
+
+interface myIterSchema {
+    status: string;
+    type: number;
+    age: number;
+}
+
+const myArrowFunc3 = <T extends myIterSchema>(opt: T) => {
+
+    const id = Math.floor(Math.random() * 100);
+    return { id, ...opt };
+};
+
+let interSchemaData: myIterSchema = {
+    status: 'Hello',
+    type: 2412,
+    age: 45
+}
+
+const myArrFunFunc = myArrowFunc3(interSchemaData);
+console.log(myArrFunFunc.status);
 
 
 
+// Use generic in InterFace:
+interface useForSchema<T> {
+    status: number;
+    type: string;
+    data: T;
+}
+
+const objDataSch: useForSchema<object> = {
+    status: 54,
+    type: 'Rahim',
+    data: {
+        name: 'Rahi',
+        age: 300,
+        datas: '3333'
+    }
+};
+
+console.log(objDataSch);
+
+
+
+// use generic in interface:
+interface useForSchema2<T> {
+    status: number;
+    type: string;
+    data: T;
+};
+
+
+const dataObjData: useForSchema2<{
+    name: string;
+    age: number;
+}> = {
+    status: 125,
+    type: 'Success',
+    data: {
+        name: 'Jisan',
+        age: 2050
+    }
+};
+
+console.log(dataObjData);
+
+
+/* ===== Use enum type ===== */
+enum rType {
+    SUCCESS,
+    FAILURE,
+    UNAUTHENTICATED,
+    FORBIDDEN
+}
+
+interface responseTime<T> {
+    status: number;
+    type: rType;
+    data: T;
+}
+
+
+const dataAsData: responseTime<object> = {
+    status: 120,
+    type: rType.FORBIDDEN,
+    data: {
+        name: 'Halim',
+        age: 200
+    }
+}
+console.log(dataAsData);
+
+
+
+/* ==== Use tuples ==== */
+
+const myFirstArr: [number, string, boolean, object] = [120, 'JavaScript', true, { name: 'BMW', price: '3 lakh' }];
+
+console.log(myFirstArr);
 
 
 

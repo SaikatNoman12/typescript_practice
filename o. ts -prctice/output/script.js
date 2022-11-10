@@ -417,3 +417,136 @@ console.log(karim);
 /* ===== TypeScript Module System ===== */
 const rihab = new Person5('Rihab Uddin', 14, 'India', 7);
 console.log(rihab);
+let myNewObj = {
+    name: 'Habib',
+    age: 30,
+    country: 'MIT'
+};
+console.log(myNewObj);
+const myNewObj2 = {
+    status: 25,
+    age: 24,
+    time: 20
+};
+console.log(myNewObj2);
+function myNewAsFunction(option) {
+    return option;
+}
+console.log(myNewAsFunction({
+    name: 'Noman',
+    age: 255,
+    country: 'Bangladesh'
+}));
+function myOneFunction(opt) {
+    return opt;
+}
+let oneObj2 = {
+    name: 'Rahi',
+    age: 26,
+    country: 'India',
+    adult: true,
+    sss: 'fdf'
+};
+console.log(myOneFunction(oneObj2));
+class Player {
+    constructor(name, age, adult, country) {
+        this.name = name;
+        this.age = age;
+        this.adult = adult;
+        this.country = country;
+    }
+    getPriority() {
+        return this.name;
+    }
+    play() {
+        console.log(` ${this.name} is playing. He lives in ${this.country}. He is not ${this.adult}. He is an ${this.age} years old.`);
+    }
+}
+const halim = new Player('Halim', 25, true, 'Pakistan');
+console.log(halim);
+const arrFunc = [];
+arrFunc.push(halim);
+console.log(arrFunc);
+// use generic:
+// use generic for function. Do not use generic type:
+const myArrowFunc = (opt) => {
+    const id = Math.floor(Math.random() * 100);
+    return Object.assign(Object.assign({}, opt), { id });
+};
+const arrowData = myArrowFunc({
+    name: 'Nadim',
+    age: 30,
+});
+console.log(arrowData);
+// use generic for function. Use generic type:
+const myArrowFunc1 = (opt) => {
+    const id = Math.floor(Math.random() * 100);
+    return Object.assign(Object.assign({}, opt), { id });
+};
+const myArr = myArrowFunc1({
+    name: 'Kamal',
+    age: 30,
+    county: 'Feni'
+});
+console.log(myArr);
+// use generic for function. Use generic type schema:
+const myArrowFunc2 = (opt) => {
+    const id = Math.floor(Math.random() * 100);
+    return Object.assign({ id }, opt);
+};
+const myArr3 = myArrowFunc2({
+    name: 'sss',
+    age: 333
+});
+console.log(myArr3);
+const myArrowFunc3 = (opt) => {
+    const id = Math.floor(Math.random() * 100);
+    return Object.assign({ id }, opt);
+};
+let interSchemaData = {
+    status: 'Hello',
+    type: 2412,
+    age: 45
+};
+const myArrFunFunc = myArrowFunc3(interSchemaData);
+console.log(myArrFunFunc.status);
+const objDataSch = {
+    status: 54,
+    type: 'Rahim',
+    data: {
+        name: 'Rahi',
+        age: 300,
+        datas: '3333'
+    }
+};
+console.log(objDataSch);
+;
+const dataObjData = {
+    status: 125,
+    type: 'Success',
+    data: {
+        name: 'Jisan',
+        age: 2050
+    }
+};
+console.log(dataObjData);
+/* ===== Use enum type ===== */
+var rType;
+(function (rType) {
+    rType[rType["SUCCESS"] = 0] = "SUCCESS";
+    rType[rType["FAILURE"] = 1] = "FAILURE";
+    rType[rType["UNAUTHENTICATED"] = 2] = "UNAUTHENTICATED";
+    rType[rType["FORBIDDEN"] = 3] = "FORBIDDEN";
+})(rType || (rType = {}));
+const dataAsData = {
+    status: 120,
+    type: rType.FORBIDDEN,
+    data: {
+        name: 'Halim',
+        age: 200
+    }
+};
+console.log(dataAsData);
+/* ==== Use tuples ==== */
+const myFirstArr = [120, 'JavaScript', true, { name: 'BMW', price: '3 lakh' }];
+console.log(myFirstArr);
